@@ -52,12 +52,10 @@ function formValidation() {
     
 var isCaptchaValidated = false;
 var response = grecaptcha.getResponse();
-if(response.length == 0) {
+if(response.length == 0) 
+{
     isCaptchaValidated = false;
     alert('Please verify that you are a Human.');
-} else {
-    isCaptchaValidated = true;
-    alert('yup.');
 }
 
     
