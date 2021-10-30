@@ -51,9 +51,9 @@ function formValidation() {
 
     
 if (grecaptcha.getResponse() == ""){
-    alert("You can't proceed!");
+    toast("You can't proceed!");
 } else {
-    alert("Thank you");
+    toast("Thank you");
 }
     
     
