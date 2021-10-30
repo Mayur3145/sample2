@@ -54,10 +54,10 @@ var isCaptchaValidated = false;
 var response = grecaptcha.getResponse();
 if(response.length == 0) {
     isCaptchaValidated = false;
-    toast('Please verify that you are a Human.');
+    alert('Please verify that you are a Human.');
 } else {
     isCaptchaValidated = true;
-    toast('yup.');
+    alert('yup.');
 }
 
     
