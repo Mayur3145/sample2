@@ -1,3 +1,4 @@
+    var recaptcha_response = '';
 function formValidation() {
 
     // Store the values of the form inputs
@@ -47,7 +48,7 @@ function formValidation() {
     }
     
     
-    var recaptcha_response = '';
+
     
     if(recaptcha_response.length == 0) {
         alert("Invalid Input");
