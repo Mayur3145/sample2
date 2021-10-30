@@ -50,15 +50,11 @@ function formValidation() {
     
 
     
-    if(recaptcha_response.length == 0) {
-        alert("Invalid Input");
-        
-        return false;
-    }
-    else{
-        alert("ok");
-    return true;
-    }
+if (grecaptcha.getResponse() == ""){
+    alert("You can't proceed!");
+} else {
+    alert("Thank you");
+}
     
     
 
@@ -96,7 +92,3 @@ function formValidation() {
     alert(receipt_formatted);
 }
 
-function verifyCaptcha(token) {
-    recaptcha_response = token;
-    document.getElementById('g-recaptcha-error').innerHTML = '';
-}
