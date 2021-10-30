@@ -6,6 +6,10 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
         <link rel="stylesheet" href="style.css" />
+        
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+        
         <title>Order Details</title>
     </head>
 
@@ -89,6 +93,12 @@
                     <label for="cash">Cash</label>
 
                     <p><strong>Total amount:</strong> ₹ 500</p>
+                    
+                    <div class="g-recaptcha" data-sitekey="6LfV3QMdAAAAAJPSLdEOs5h7zWVcxDg2wxXmZ2Uo" data-callback="verifyCaptcha"></div>
+    <div id="g-recaptcha-error"></div>
+    
+                    
+                    
                     <button class="button green" name="submit" type="submit">Place Order</button>
                 </form> 
                 
