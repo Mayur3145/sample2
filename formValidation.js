@@ -50,11 +50,16 @@ function formValidation() {
     
 
     
-if (grecaptcha.getResponse() == ""){
-    toast("You can't proceed!");
+var isCaptchaValidated = false;
+var response = grecaptcha.getResponse();
+if(response.length == 0) {
+    isCaptchaValidated = false;
+    toast('Please verify that you are a Human.');
 } else {
-    toast("Thank you");
+    isCaptchaValidated = true;
+    toast('yup.');
 }
+
     
     
 
