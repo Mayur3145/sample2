@@ -45,6 +45,21 @@ function formValidation() {
         values[5].focus();
         return;
     }
+    
+    
+    var recaptcha_response = '';
+    
+    if(recaptcha_response.length == 0) {
+        alert("Invalid Input");
+        
+        return false;
+    }
+    else{
+        alert("ok");
+    return true;
+    }
+    
+    
 
     // Validate the user order date input
     todaysDate = new Date();
@@ -78,4 +93,9 @@ function formValidation() {
     // Print the receipt
     const receipt_formatted = `Here's your receipt:\n\nTagline: ${values[0]}\nColor: ${values[1]}\nSize: ${values[2]}\nQuantity: ${values[3]}\nName: ${values[4]}\nPhone Number: ${values[5]}\nAddress: ${values[6]}\nPayment Method: ${values[7]}\nTotal Cost: ₹ 500\n\nDate of receipt: ${todaysDate}`;
     alert(receipt_formatted);
+}
+
+function verifyCaptcha(token) {
+    recaptcha_response = token;
+    document.getElementById('g-recaptcha-error').innerHTML = '';
 }
